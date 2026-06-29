@@ -1,0 +1,8 @@
+flowchart LR
+  ESP[ESP32-S3 N16R8]
+  ESP -- I2S GPIO4-6 --> AMP[MAX98357A]
+  AMP --> SPK[3W Speaker]
+  BTN[Buttons] -- GPIO14-17 --> ESP
+  BAT[Protected 1S2P pack] --> PWR[Charger + power path + regulators]
+  PWR --> ESP
+  PWR --> AMP

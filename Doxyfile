@@ -1,0 +1,12 @@
+PROJECT_NAME           = "teni-core"
+PROJECT_BRIEF          = "Extensible offline smart-toy embedded platform"
+OUTPUT_DIRECTORY       = build/docs
+INPUT                  = firmware/include firmware/src
+RECURSIVE              = YES
+EXTRACT_ALL             = YES
+GENERATE_HTML           = YES
+GENERATE_LATEX          = NO
+WARN_IF_UNDOCUMENTED    = YES
+JAVADOC_AUTOBRIEF       = YES
+QUIET                   = YES
+

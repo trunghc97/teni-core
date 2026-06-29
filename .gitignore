@@ -1,0 +1,9 @@
+.pio/
+.vscode/.browse.c_cpp.db*
+.vscode/ipch/
+*.o
+*.d
+.DS_Store
+compile_commands.json
+__pycache__/
+*.pyc

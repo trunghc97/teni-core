@@ -1,0 +1,73 @@
+{
+  "assetCount": 8,
+  "embeddedBytes": 1492,
+  "limitBytes": 12582912,
+  "assets": [
+    {
+      "id": "responses/templates",
+      "path": "/responses/templates.json",
+      "kind": "responses",
+      "mime": "application/json",
+      "sha256": "c45be544b31e3fc3ada70aa0943db5237b7bde92d31c6fd601d9e36740a60ba5",
+      "size": 229
+    },
+    {
+      "id": "knowledge/alphabet",
+      "path": "/knowledge/alphabet.json",
+      "kind": "knowledge",
+      "mime": "application/json",
+      "sha256": "39b5eda44d642d2df83bf3b2252e9828b1762d6167001deca7096ee48876aab0",
+      "size": 152
+    },
+    {
+      "id": "knowledge/animals",
+      "path": "/knowledge/animals.json",
+      "kind": "knowledge",
+      "mime": "application/json",
+      "sha256": "01c7d1409f6db48cb4a3d01f1c217d1a6255c359bde2bf46d33535bd57ea3eef",
+      "size": 280
+    },
+    {
+      "id": "knowledge/bedtime",
+      "path": "/knowledge/bedtime.json",
+      "kind": "knowledge",
+      "mime": "application/json",
+      "sha256": "b704a2468ba0967cfe285411a55962e611521016e2d667a87aa7a85f1340497f",
+      "size": 181
+    },
+    {
+      "id": "knowledge/colors",
+      "path": "/knowledge/colors.json",
+      "kind": "knowledge",
+      "mime": "application/json",
+      "sha256": "bdec0ee1615d398db99924124333f357b7ebb0cf0e9334346a7f1c2d402b809b",
+      "size": 300
+    },
+    {
+      "id": "knowledge/greetings",
+      "path": "/knowledge/greetings.json",
+      "kind": "knowledge",
+      "mime": "application/json",
+      "sha256": "8f845fbc7e8fb5074fde3b1f9b11df8dd25153d7b07ae30fbd2d19774c3cef6b",
+      "size": 107
+    },
+    {
+      "id": "knowledge/math",
+      "path": "/knowledge/math.json",
+      "kind": "knowledge",
+      "mime": "application/json",
+      "sha256": "e5934be30f08497f323a615a1d16052e4393892a16b3e2bd0cade99661c2358e",
+      "size": 101
+    },
+    {
+      "id": "knowledge/numbers",
+      "path": "/knowledge/numbers.json",
+      "kind": "knowledge",
+      "mime": "application/json",
+      "sha256": "a5d930c1f00f747ffc63df768638bceb7e676f0a545652d92f8af0a724bd06d8",
+      "size": 142
+    }
+  ],
+  "knowledgeRecords": 25,
+  "responseTemplates": 4
+}
