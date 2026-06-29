@@ -1,6 +1,6 @@
 {
-  "assetCount": 8,
-  "embeddedBytes": 1492,
+  "assetCount": 12,
+  "embeddedBytes": 3180508,
   "limitBytes": 12582912,
   "assets": [
     {
@@ -10,6 +10,38 @@
       "mime": "application/json",
       "sha256": "c45be544b31e3fc3ada70aa0943db5237b7bde92d31c6fd601d9e36740a60ba5",
       "size": 229
+    },
+    {
+      "id": "stories/banh_chung_banh_day",
+      "path": "/stories/banh_chung_banh_day.mp3",
+      "kind": "stories",
+      "mime": "audio/mpeg",
+      "sha256": "ebb58e4446ab9a069158d162def42a53242ad6678fda9d17022cedef588b3da4",
+      "size": 808194
+    },
+    {
+      "id": "stories/cay_khe",
+      "path": "/stories/cay_khe.mp3",
+      "kind": "stories",
+      "mime": "audio/mpeg",
+      "sha256": "3b8ed0abc2079218479a9c73981c1f200d27d5e50d211d4776fadd9a053a5316",
+      "size": 843930
+    },
+    {
+      "id": "stories/chu_cuoi_cung_trang",
+      "path": "/stories/chu_cuoi_cung_trang.mp3",
+      "kind": "stories",
+      "mime": "audio/mpeg",
+      "sha256": "a589adcfcb2dbf60000c916ee4be15b2fb949af9b0fd2c3dc126d82e4991d8ef",
+      "size": 752553
+    },
+    {
+      "id": "stories/su_tich_ho_guom",
+      "path": "/stories/su_tich_ho_guom.mp3",
+      "kind": "stories",
+      "mime": "audio/mpeg",
+      "sha256": "93ea5fedabfe763837b35be24b996c70f667202d0dc006dd6da0019201426a8a",
+      "size": 774339
     },
     {
       "id": "knowledge/alphabet",

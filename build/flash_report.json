@@ -1,6 +1,6 @@
 {
-  "firmwareBinaryBytes": 714448,
-  "embeddedAssetBytes": 1492,
+  "firmwareBinaryBytes": 3894064,
+  "embeddedAssetBytes": 3180508,
   "applicationPartitionBytes": 15597568,
-  "remainingApplicationBytes": 14883120
+  "remainingApplicationBytes": 11703504
 }
