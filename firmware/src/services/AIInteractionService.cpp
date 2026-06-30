@@ -6,7 +6,7 @@ bool AIInteractionService::isKnowledgeIntent(interfaces::Intent intent) {
   using interfaces::Intent;
   return intent == Intent::Greeting || intent == Intent::Animal || intent == Intent::Color ||
          intent == Intent::Alphabet || intent == Intent::Number || intent == Intent::Math ||
-         intent == Intent::Bedtime || intent == Intent::Unknown;
+         intent == Intent::Bedtime || intent == Intent::Conversation || intent == Intent::Unknown;
 }
 
 interfaces::AIResult AIInteractionService::process(const std::string& question) {

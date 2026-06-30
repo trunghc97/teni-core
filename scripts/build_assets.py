@@ -11,6 +11,7 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 from typing import Any
 
@@ -27,6 +28,11 @@ INDEX = PROJECT / "build/asset_index.json"
 AUDIO_EXTENSIONS = {".mp3", ".wav"}
 MAX_EMBEDDED_BYTES = 12 * 1024 * 1024
 WAV_COMPRESS_THRESHOLD = 2 * 1024 * 1024
+
+SCRIPT_DIR = PROJECT / "scripts"
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+from prepare_story_audio import prepare_story_audio
 
 
 def _identifier(path: str) -> str:
@@ -114,6 +120,7 @@ def _cpp_string(value: str) -> str:
 
 
 def generate() -> None:
+    prepare_story_audio(PROJECT)
     records = scan_assets()
     total = sum(len(record["data"]) for record in records)
     if total > MAX_EMBEDDED_BYTES:

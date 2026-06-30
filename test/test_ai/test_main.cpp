@@ -45,10 +45,61 @@ void test_simple_ai_supports_fuzzy_and_math_matching() {
                         static_cast<int>(unknown.intent));
 }
 
+void test_simple_ai_answers_light_conversation() {
+  teni::services::AssetManager assets;
+  teni::services::SimpleAIEngine ai(assets);
+
+  const auto wellbeing = ai.process("Teni ơi, bạn khỏe không?");
+  TEST_ASSERT_EQUAL_INT(static_cast<int>(teni::interfaces::Intent::Conversation),
+                        static_cast<int>(wellbeing.intent));
+  TEST_ASSERT_EQUAL_STRING(
+      "Mình khỏe và rất vui khi được trò chuyện với bạn. Còn bạn thì sao?",
+      wellbeing.response.c_str());
+
+  const auto comfort = ai.process("Hôm nay mình buồn");
+  TEST_ASSERT_EQUAL_INT(static_cast<int>(teni::interfaces::Intent::Conversation),
+                        static_cast<int>(comfort.intent));
+  TEST_ASSERT_EQUAL_STRING(
+      "Mình đang ở đây với bạn. Mình cùng hít thở chậm một chút nhé.",
+      comfort.response.c_str());
+
+  const auto name = ai.process("Bạn tên gì?");
+  TEST_ASSERT_EQUAL_INT(static_cast<int>(teni::interfaces::Intent::Greeting),
+                        static_cast<int>(name.intent));
+  TEST_ASSERT_EQUAL_STRING("Tôi là Teni.", name.response.c_str());
+
+  const auto identity = ai.process("Bạn là ai vậy?");
+  TEST_ASSERT_EQUAL_INT(static_cast<int>(teni::interfaces::Intent::Greeting),
+                        static_cast<int>(identity.intent));
+  TEST_ASSERT_EQUAL_STRING("Tôi là Teni.", identity.response.c_str());
+}
+
+void test_simple_ai_routes_all_supported_conversation_phrases() {
+  teni::services::AssetManager assets;
+  teni::services::SimpleAIEngine ai(assets);
+  const char* questions[] = {
+      "Bạn khỏe không?",         "Bạn đang làm gì?",       "Bạn thích gì?",
+      "Bạn bao nhiêu tuổi?",     "Cảm ơn Teni.",            "Tạm biệt nhé.",
+      "Hôm nay mình buồn.",      "Hôm nay mình vui.",       "Mình sợ quá.",
+      "Bạn làm được gì?",        "Teni có thể làm gì?",     "Chúng mình làm bạn nhé.",
+      "Bạn ở đâu?",              "Bạn có phải robot không?",
+  };
+
+  for (const char* question : questions) {
+    const auto result = ai.process(question);
+    TEST_ASSERT_EQUAL_INT(static_cast<int>(teni::interfaces::Intent::Conversation),
+                          static_cast<int>(result.intent));
+    TEST_ASSERT_FALSE(result.response.empty());
+    TEST_ASSERT_NOT_EQUAL(0, result.response.compare("Mình chưa biết câu trả lời cho câu hỏi đó."));
+  }
+}
+
 int main(int, char**) {
   UNITY_BEGIN();
   RUN_TEST(test_embedded_asset_manager_exposes_knowledge);
   RUN_TEST(test_simple_ai_matches_control_and_knowledge_intents);
   RUN_TEST(test_simple_ai_supports_fuzzy_and_math_matching);
+  RUN_TEST(test_simple_ai_answers_light_conversation);
+  RUN_TEST(test_simple_ai_routes_all_supported_conversation_phrases);
   return UNITY_END();
 }

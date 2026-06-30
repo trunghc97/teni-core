@@ -20,6 +20,10 @@ edit for keywords of at least four bytes. Knowledge answers are exact key matche
 topic; supported arithmetic is intentionally limited to compiled examples. Unknown input returns a
 fixed template, never fabricated text.
 
+The `Conversation` intent covers a small, child-friendly set of casual exchanges such as wellbeing,
+feelings, thanks, goodbyes, friendship, and Teni's capabilities. Its deterministic answers live in
+`knowledge/conversation.json`; it does not pretend to know changing facts such as time or weather.
+
 To add an answer, edit the corresponding `knowledge/*.json`. To add recorded speech, place files such
 as `assets/responses/greeting.mp3`; text remains the fallback. Replacing the engine happens inside
 `createAIEngine()`. Consumers continue using `IAIEngine` and `AIResult`.

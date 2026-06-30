@@ -28,6 +28,8 @@ const char* SimpleAIEngine::topicFor(interfaces::Intent intent) {
       return "math";
     case Intent::Bedtime:
       return "bedtime";
+    case Intent::Conversation:
+      return "conversation";
     default:
       return nullptr;
   }
@@ -46,6 +48,7 @@ const char* SimpleAIEngine::templateFor(interfaces::Intent intent) {
     case Intent::Number:
     case Intent::Math:
     case Intent::Bedtime:
+    case Intent::Conversation:
       return "not_found";
     default:
       return "acknowledge";

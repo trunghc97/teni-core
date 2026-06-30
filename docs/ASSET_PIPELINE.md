@@ -1,6 +1,11 @@
 # Asset pipeline
 
-`scripts/build_assets.py` scans `assets/` and `knowledge/` in sorted order, calculates SHA-256,
+Before scanning assets, `scripts/build_assets.py` invokes `scripts/prepare_story_audio.py`. Story
+source can be MP3, WAV, or text under `content/stories/`; changed text is synthesized with the local
+F5-TTS Vietnamese ViVoice pipeline and all story inputs are normalized to mono 22.05 kHz, 48 kbit/s
+MP3. See [TTS_PIPELINE.md](TTS_PIPELINE.md).
+
+`scripts/build_assets.py` then scans `assets/` and `knowledge/` in sorted order, calculates SHA-256,
 flattens knowledge and response JSON, and generates:
 
 - `firmware/include/generated/assets.h`
@@ -31,4 +36,3 @@ records, so the device does not parse JSON or allocate a document at runtime.
 
 `scripts/flash_report.py` reports binary bytes, embedded asset bytes, partition capacity, and
 remaining application space after every target build.
-

@@ -22,8 +22,18 @@ const std::vector<IntentMatcher::Rule> kRules{
     {Intent::Color, 60, {"màu gì", "màu sắc"}, {"color", "đỏ", "vàng", "xanh"}},
     {Intent::Alphabet, 60, {"chữ cái", "bảng chữ cái"}, {"alphabet"}},
     {Intent::Number, 60, {"con số", "số mấy"}, {"number"}},
+    {Intent::Conversation,
+     58,
+     {"khỏe không", "đang làm gì", "thích gì", "bao nhiêu tuổi", "cảm ơn", "tạm biệt",
+      "mình buồn", "mình vui", "mình sợ", "làm được gì", "có thể làm gì", "làm bạn",
+      "bạn ở đâu", "teni ở đâu", "phải robot"},
+     {}},
     {Intent::Bedtime, 55, {"đi ngủ", "ngủ ngon"}, {"bedtime", "sleep"}},
-    {Intent::Greeting, 50, {"xin chào", "chào teni"}, {"hello", "hi"}},
+    {Intent::Greeting,
+     50,
+     {"xin chào", "chào teni", "bạn tên gì", "tên của bạn", "teni tên gì", "bạn là ai",
+      "cậu là ai", "ai vậy"},
+     {"hello", "hi"}},
 };
 }  // namespace
 

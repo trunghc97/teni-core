@@ -20,6 +20,7 @@ enum class Intent : std::uint8_t {
   Number,
   Math,
   Bedtime,
+  Conversation,
   Unknown
 };
 

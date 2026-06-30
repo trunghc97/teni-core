@@ -1,0 +1,9 @@
+.cache
+.git
+.pio
+assets
+build
+firmware/src/generated
+__pycache__
+*.mp3
+*.wav

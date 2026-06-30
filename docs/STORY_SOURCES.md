@@ -1,8 +1,10 @@
 # Vietnamese story assets
 
-The four MVP1.1 recordings are original, child-friendly retellings of Vietnamese folk legends,
-written for teni-core and synthesized locally with the macOS Vietnamese voice `Linh`. No commercial
-audiobook recording or third-party narration is included.
+The four original MVP1.1 recordings are child-friendly retellings of Vietnamese folk legends,
+written for teni-core and synthesized locally with the macOS Vietnamese voice `Linh`. They remain as
+cached build outputs until their text changes or a forced regeneration is requested. New or changed
+text is synthesized automatically with F5-TTS Base and the Vietnamese ViVoice checkpoint described in
+[TTS_PIPELINE.md](TTS_PIPELINE.md). No commercial audiobook recording is included.
 
 | Asset | Script | Reference context |
 |---|---|---|
@@ -12,4 +14,4 @@ audiobook recording or third-party narration is included.
 | `banh_chung_banh_day.mp3` | `content/stories/banh_chung_banh_day.txt` | Hùng Kings folk tradition |
 
 Audio encoding: mono MP3, 22.05 kHz, 48 kbit/s. The scripts are retained to make corrections,
-re-recording, translation, and voice replacement reproducible.
+re-recording, translation, and automatic voice replacement reproducible.

@@ -1,6 +1,6 @@
 {
-  "assetCount": 12,
-  "embeddedBytes": 3180508,
+  "assetCount": 13,
+  "embeddedBytes": 3182109,
   "limitBytes": 12582912,
   "assets": [
     {
@@ -76,12 +76,20 @@
       "size": 300
     },
     {
+      "id": "knowledge/conversation",
+      "path": "/knowledge/conversation.json",
+      "kind": "knowledge",
+      "mime": "application/json",
+      "sha256": "cb3d6fce0f970cb48bde80f45f3f6676cce09b70204b8c6ec0d9880e7a137771",
+      "size": 1500
+    },
+    {
       "id": "knowledge/greetings",
       "path": "/knowledge/greetings.json",
       "kind": "knowledge",
       "mime": "application/json",
-      "sha256": "8f845fbc7e8fb5074fde3b1f9b11df8dd25153d7b07ae30fbd2d19774c3cef6b",
-      "size": 107
+      "sha256": "46dc2f38cba551130a8c5498e8e741fa3c78d3f589871eff4b08921abe2982b1",
+      "size": 208
     },
     {
       "id": "knowledge/math",
@@ -100,6 +108,6 @@
       "size": 142
     }
   ],
-  "knowledgeRecords": 25,
+  "knowledgeRecords": 43,
   "responseTemplates": 4
 }
